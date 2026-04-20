@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+
+body {
+    font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif, Verdana, "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+    background-color: #F0EBEA;
+}
+
+header {
+    background-color: #668E68;
+    display:flex;  /*ロゴとulを横に並べる*/
+    justify-content:space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center; 
+}
+
+h1 img{
+    width: 130px;   /* 好みで調整 */
+    height: auto; /* 縦横比を保つ */  
+    margin-right: 40px;
+}
+
+ul{
+    display:flex;
+    list-style:none;
+}
+
+li{
+    margin-left:20px;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration:none;
+    color:#333;
+}
+
+a:hover{
+    color: #fff;
+}
+
+.main-visual {
+    background-image: url(images/top-image.png);
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    display: flex;
+    align-items: flex-end;   
+    padding-left: 80px;
+    padding-bottom: 80px;
+}
+
+.mv-textbox {
+    background-color: rgba(255, 255, 255, 0.6); 
+    padding: 40px;
+    width: 400px;
+    font-family: "Noto Serif JP", serif;
+}
+
+.main-visual h2 {
+    color: #655046;
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.main-visual p{
+    color: #655046;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-top: 16px; 
+    text-align: left;  
+}
+
+h3 {
+    color: #655046;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;  
+}
+
+.about {
+    padding: 95px 0;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-text{
+    width: 60%;
+}
+
+.about p {
+    color: #655046;
+    font-size: 16px;
+    line-height: 2.0;
+}
+
+.about-image{
+    width: 40%;
+}
+
+.about-image img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    margin-left: 40px;
+}
+
+.story {
+    background-color: #fff;
+    padding: 100px 20px;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+
+h4 {
+    color: #655046;
+    font-size: 18px;
+    margin-bottom: 11px;  
+}
+
+/* リスト */
+.story-list{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+/* 1行（画像＋テキスト） */
+.story-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 偶数行だけ左右反転（←これが肝） */
+.story-item:nth-child(odd){
+    margin-left: 70px;
+}
+.story-item:nth-child(even){
+    margin-right: 70px;
+    flex-direction: row-reverse;
+}
+
+/* 画像：丸にする */
+.story-photo{
+    width: 180px;
+    height: 180px;
+    flex: 0 0 180px;
+}
+.story-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* 文章 */
+.story-text{
+    max-width: 450px;
+}
+.story-text h3{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.story-text p{
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.menu {
+    padding-top: 85px;
+    padding-bottom: 95px;
+    text-align: center;
+}
+
+.menu-wrapper {
+    border: 2px dotted #ac9675;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 58px; 
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-wrapper div {
+    background:#fff;
+    width: calc(50% - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.menu-wrapper img{
+    width: 100%;
+}
+
+.menu-wrapper p {
+    margin-top: 10px;
+}
+
+.menu-name {
+    margin-top: 10px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.menu-desc {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #c79c6e;
+    padding: 20px;
+    border-radius: 30px;
+    transition: all .5s;
+}
+
+.menu a:hover {
+    background-color: #668E68;
+}
+
+/* 店舗情報セクション */
+.shop{
+    background: #e9efe6;
+    padding: 80px 20px 90px;
+}
+
+.shop-inner{
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* タイトル */
+.section-title h3{
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 0.05em;
+}
+
+.title-line{
+    display: block;
+    width: 260px;
+    height: 3px;
+    background: #9fcf8a;      /* 黄緑のライン */
+    margin: 14px auto 40px;
+    border-radius: 999px;
+}
+
+/* 地図＋情報 */
+.shop-box{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 45px;
+}
+
+.shop-map{
+    width: 260px;
+    height: 180px;
+    background: #fff;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.shop-map img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* 店舗情報（dlを整える） */
+.shop-info{
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.shop-info > div{
+    display: flex;
+    gap: 8px;
+}
+
+.shop-info dt{
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.shop-info dd{
+    margin: 0;
+}
+
+/* 説明文 */
+.shop-note{
+    margin: 0 0 25px;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* お問い合わせボタン */
+.shop-btn{
+    display: inline-block;
+    padding: 12px 34px;
+    background: #c79c6e;
+    color: #fff;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.shop-btn:hover{
+    background-color: #668E68;
+}
+
+footer {
+    background-color: #668E68;
+    color: #fff;
+    font-size: 14px;
+    padding: 25px;
+    text-align: center;
+}
